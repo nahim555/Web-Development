@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>UEA Property Solutions</title>
+	
+	<link type="text/css" rel="stylesheet" href="property.css">
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="home.js"></script>
+
+<script>
+// utility functions for localstorage
+function setObject(key, value) {
+window.localStorage.setItem(key,
+JSON.stringify(value));
+};
+function getObject(key) {
+var storage = window.localStorage;
+var value = storage.getItem(key);
+return value && JSON.parse(value);
+};
+function clearStorage() {
+// removes everything placed in localstorage
+window.localStorage.clear();
+};
+
+
+function fetchComments(){
+
+ var inlist =  getObject('key');
+ if(inlist === null){
+ inlist='';
+ }
+ //display the comments
+ $('#cmtlist9').empty();
+ $('#cmtlist9').append(inlist);
+ }; 
+ 
+ if ($('#txt1').val() === 'CLEAR ALL STORAGE NOW!'){
+clearStorage();
+};
+
+</script> 
+
+<style>
+
+
+</style
+
+</head>
+
+<body onload="fetchComments()">
+<div id= "container">
+	<div id="titleHd">
+	<div id="title"><img src="a.jpg" alt="home">UEA Property Solutions
+	</div>
+	<div id="phone"><img src="p.png" alt="phone"> 0333 567 4433
+	</div>
+	</div>
+		<div id = "header">
+			<div class ="logo">
+			</div>
+				<div id = "nav">
+					<ul>
+						<li><a href="contact.html">Contact</a></li>
+						<li><a href="comments.html">Comments</a></li>
+						<li><a href="attractions.html">Attractions</a></li>
+						<li><a href="index.html">Home</a></li>
+					</ul>
+				</div>
+				
+			</div>
+<div id="content">
+<div id="mainComment">
+	
+		<h4>Your comment</h4>
+		
+		
+		<input id="namebox" type="text"  maxlength="32" size="30" style="color:blue" cols="40" 
+			value="Name"/>
+		<br/>
+		
+		<textarea id="txt1" class="textbox" rows="2" cols="40"></textarea>
+		</br>
+
+	<button type="button1" onclick="clearComment()">clear comment</button>
+	<button type="button1" onclick="saveComment()">save comment</button>
+	<button type="button1" onclick="location.href='comments.html'">load page</button>
+	<button type="button2" onclick="clearStorage()">clear</button>
+	<h4>Comments</h4>
+	<div id="cmtlist9">
+	<p></p>
+
+	</div>
+	
+	
+	
+
+</div>
+</div>
+<div id="footer">
+</div>
+</div>
+
+
+
+
+
+</body>
+</html>

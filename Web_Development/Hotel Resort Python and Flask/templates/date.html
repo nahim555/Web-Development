@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+
+
+
+</script>
+</head>
+
+
+<body>
+<div id="main">
+<li><a href='/about'>About</a></li>
+						<li><a href='/comment'>Comments</a></li>
+						<li><a href='/attractions'>Attractions</a></li>
+						<li><a href='/'>Home</a></li>
+					
+<h1>Add comment</h1>
+<form action = "addComment" method = "post" id="commentsForm">
+<input type = "text" name="event" placeholder="Name" /><br>
+<textarea id = "txt1" class="textbox" rows="2" col="40" name="comment" placeholder="comment"></textarea> <br>
+<input type = "submit" value = "Add to list"/>
+</form>
+
+<form action = "clearComments" method = "post">
+    <input type = "submit" value="clear Comments">
+     </form>
+<h1>comments</h1>
+<table>
+	{% for line in events %}
+	<tr>
+		{% for item in line %}
+	<td>
+		{{item}}
+	</td>
+	{% endfor %}
+	</tr>
+	{% endfor %}
+	</table>
+
+</body>
+
+</html>

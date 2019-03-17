@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta http-equiv="Content-type" content="text/html"/>
+     <title>Thank You</title>
+	 <script>
+function myFunction() {
+    var str = document.getElementById("demo").innerHTML; 
+    var res = str.replace("no", "yes");
+    document.getElementById("demo").innerHTML = res;
+}
+</script>
+  </head>
+<body>
+  <h1>Bookings</h1>
+  <div id="demo">
+	<table border="1">
+	<tr>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Arrival</th>
+		<th>Depart</th>
+		<th>Confirmed</th>
+	</tr>
+		{% for line in bookingForm %}
+		<tr>
+		{% for item in line %}
+		<td>
+		{{item}}</td>
+		{%endfor%}
+		</tr>
+		{%endfor%}
+		</table>
+	</div>
+	<button type="button1" onclick="myFunction()">Yes</button>
+	
+</body>
+</html>
+   

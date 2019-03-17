@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>Dubya comments</title>
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="home.js"></script>
+
+<script>
+// utility functions for localstorage
+function setObject(key, value) {
+window.localStorage.setItem(key,
+JSON.stringify(value));
+};
+function getObject(key) {
+var storage = window.localStorage;
+var value = storage.getItem(key);
+return value && JSON.parse(value);
+};
+function clearStorage() {
+// removes everything placed in localstorage
+window.localStorage.clear();
+};
+
+
+function fetchComments(){
+
+ var inlist =  getObject('key');
+ if(inlist === null){
+ inlist='';
+ }
+ //display the comments
+ $('#cmtlist9').empty();
+ $('#cmtlist9').append(inlist);
+ }; 
+ 
+ if ($('#txt1').val() === 'CLEAR ALL STORAGE NOW!'){
+clearStorage();
+};
+
+</script> 
+
+<style>
+
+.button1{
+	background-color:green;
+	color:white;
+	border:2px solid red;
+	
+.button2{
+	background-color:green;
+	color:white;
+	border:2px solid red;
+
+#namebox{
+	background-color:yellow;
+	color:blue;
+}
+
+#cmtlist9 p{
+	background-color:blue;
+	color:blue;
+
+}
+
+}
+
+
+</style>
+</head>
+
+<body onload="fetchComments()">
+<header id="banner">
+ <!--the header section in your homepage goes here-->
+</header>
+<nav>
+	<button type="button1" onclick="clearComment()">clear comment</button>
+	<button type="button1" onclick="saveComment()">save comment</button>
+	<button type="button1" onclick="location.href='n.html'">load page</button>
+	<button type="button2" onclick="clearStorage()">clear</button>
+</nav>
+<div id="main">
+	
+		<h4>Your comment</h4>
+		<input id="namebox" type="text"  maxlength="32" size="20" style="color:blue"
+			value="Name"/>
+		<br/>
+		
+		<textarea id="txt1" class="textbox" rows="6"></textarea>
+
+
+	
+	<h4>Comments</h4>
+	<div id="cmtlist9">
+	<p></p>
+
+	</div>
+	
+
+</div>
+
+
+
+
+
+</body>
+</html>

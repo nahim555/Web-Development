@@ -1,0 +1,248 @@
+<!--- 100108964 --->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>UEA Property Solutions</title>
+	
+	<link type="text/css" rel="stylesheet" href="property.css">
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script>
+	$(document).ready(function(){
+	var readMoreHTML = $(".read-more").html();
+	var lessText = readMoreHTML.substr(0,100);
+	
+	if(readMoreHTML.length >100){
+		$(".read-more").html(lessText).append("<a href='' class ='read-more-link'>show more</a>");
+		} else {
+			$(".read-more").html(readMoreHTML);
+		
+		}
+		
+		$("body").on("click", ".read-more-link", function(event){
+			event.preventDefault();
+			$(this).parent(".read-more").html(readMoreHTML).append("<a href='' class='show-less-link'>show less</a>")
+		});
+		
+		$("body").on("click", ".show-less-link", function(){
+			event.preventDefault();
+			$(this).parent(".read-more").html(readMoreHTML.substr(0,100)).append("<a href='' class='read-more-link'>show more</a>")
+		});
+		
+		
+	
+	});
+</script>
+
+<style>
+
+<style>
+.content1 {
+	background:#fff;
+	width:600px;
+	padding:40px;
+	min-height:300px;
+
+}
+
+.read-more{
+	margin-bottom:20px;
+	
+.read-more-link, .show-less-link{
+	text-decoration:none;
+	font-weight:bolder;
+	color:green;
+}
+
+}
+
+
+
+
+
+</style>
+
+
+
+</head>
+
+	<body>
+	
+	<div id = "container">
+	<div id="titleHd">
+	<div id="title"><img src="a.jpg" alt="home">UEA Property Solutions
+	</div>
+	<div id="phone"><img src="p.png" alt="phone"> 0333 567 4433
+	</div>
+	</div>
+		<div id = "header">
+			<div class ="logo">
+			</div>
+				<div id = "nav">
+					<ul>
+						<li><a href="contact.html">Contact</a></li>
+						<li><a href="comments.html">Comments</a></li>
+						<li><a href="attractions.html">Attractions</a></li>
+						<li><a href="index.html">Home</a></li>
+					</ul>
+				</div>
+				
+			</div>
+				<div id = "content">
+					<div id = "background1">
+					<div id="hometitle">
+						<div class ="riverhouse">The RiverHouse</div>
+						
+						<div class="priceft">Now: £690</div>
+						<div class ="p">Price for 16/11/2016 for 7 Nights</div>
+					</div>
+					
+				
+					
+
+			<div class = "homeimg">
+					
+			<img src ="images/1.jpg" alt="home" id="mainImage" />	
+				<br />
+				<div class="gallery">
+		
+				
+				<img onclick="getElementById('mainImage').src=getElementById('outside').src"	
+				id ="outside" src="images/1.jpg" alt="outside" />
+				<img onclick="getElementById('mainImage').src=getElementById('kitchenim').src" 		
+				id ="kitchenim" src="kitchen1.jpg" alt="Kitchen" />
+				<img onclick="getElementById('mainImage').src=getElementById('bathroom').src" 		
+				id ="bathroom" src="bath1.jpg" alt="bathroom"  />
+				<img onclick="getElementById('mainImage').src=getElementById('bathroom2').src" 		
+				id ="bathroom2" src="images/bath1.jpg" alt="bathroom"  />
+				<img onclick="getElementById('mainImage').src=getElementById('bedroom').src" 	
+				id ="bedroom" src="bed1.jpg" alt="bedroom" />
+				<img onclick="getElementById('mainImage').src=getElementById('bedroom2').src" 		
+				id ="bedroom2" src="images/bed2.jpg" alt="bedroom" />
+				<img onclick="getElementById('mainImage').src=getElementById('livingroom').src" 		
+				id ="livingroom" src="images/livingroom1.jpg" alt="livingroom"  />
+				<img onclick="getElementById('mainImage').src=getElementById('garden').src" 		
+				id ="garden" src="garden.jpg" alt="garden" />
+				
+		
+
+				
+				</div>
+				
+					</div>
+					
+					
+					<div id="keyinfo">
+			<div class="title1">
+			<h1>Key Features</h1>
+			<div class="move"><div class="pblock"><p>Pets</p></div>
+			<div class="blockF"><p>Allowed</p></div>
+			<br>
+			<div class="pblock"><p>Bathrooms</p></div>
+			<div class="blockF"><p>1 Bathroom</p></div>
+			</div>
+			
+			
+			
+			<div class="pblock"><p>Bedrooms</p></div>
+			<div class="blockF"><p>2 Bedroom(s)</p></div>
+			<br>
+			<div class="pblock"><p>Sleeps</p></div>
+			<div class="blockF"><p>Sleeps up to 6 people</p></div>
+			<br>
+			<div class="pblock"><p>Other</p></div>
+			<div class="otherF">
+			<div class="bordersF"><p>Off Road Parking &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  Ground Floor Room</p></div>
+			<div class="b1"><p>Garden/Patio &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Washing Machine</p></div>
+			<div class="b1"><p>Broadband/Wifi &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; Smoke Free</p></div>
+			</div>
+	
+			
+			</div>
+			</div>
+					
+					<div id="aboutCottage">
+					<h1>Accomodation Info </h1>
+			<p>Equipped with a conservatory leading to an enclosed garden, enjoy amazing sea views from both the ground and first floor bedrooms.</p>
+
+<p>This mid-terrace chalet is located on the outskirts of the village of Burgh Castle in Norfolk. This lovely chalet is set on the edge of Kingfisher Holiday Park, overlooking the grounds and fields to the marina beyond. From the small patio outside you step straight into the main living area, which is open plan with a small, well-equipped kitchen with dining area and comfortable sofas to sink into after a day out exploring. One of the sofas can be used as a sofa bed, offering greater sleeping flexibility. Directly off the main living area are two bedrooms and a family shower room with a large walk-in shower. Kingfisher Holiday Park has beautifully presented well-kept lawns, ideal for children to enjoy the wide open spaces. You can walk for miles directly from your doorstep along the riverbank enjoying beautiful views over the marshes and the area is a real haven for wildlife. Why not take the footpath to the marina where you can stop at the pub for a bite to eat before returning home to your holiday chalet. With Great Yarmouth on your doorstep, the Norfolk Broads and the wonderful Norfolk Coast just 10 minutes' away, this holiday chalet is in an ideal location to explore this wonderful part of the country</p>
+<p>Ground floor: Living room. Kitchen. Conservatory. 1 twin bedroom. Bathroom with shower over bath and toilet. Steep stairs to first floor: 2 bedrooms: 1 double (5ft) with en-suite shower room and toilet, 1 twin. 
+Gas CH, gas, elec and bed linen inc. Freesat TV. DVD. CD. Gas hob. Electric oven. M/wave. Washer/dryer. D/washer. Freezer. Wi-fi. Enclosed lawned garden with sitting-out area and furniture. BBQ. Parking (3 cars). No smoking. </p>
+
+<div class="content1">
+<div class="read-more">
+
+<h4>More:</h4>
+<p>
+<ul><li>Oil radiators</li>
+	<li>Electric oven and hob, microwave, fridge, TV with Freeview, DVD</li>
+<li>Fuel and power included in rent</li>
+<li>Bed linen and towels</li>
+<li>Travel cot and highchair</li>
+<li>Off road parking for 2 cars</li>
+<li>One dog</li>
+<li>Shared use of communal lawned grounds</li>
+<li>No smoking</li>
+<li>Shop and ba arer 5 mins walk</li>
+<ul>
+</p>
+
+ <a class="read-more-hide hide" href="#"></a>
+</div>
+</div>
+
+
+</div>
+				
+			<div class="maphd">
+			
+			<div class="maptitle">
+			<h1>Map Information</h1>
+			</div>
+			<br>
+			
+			
+			
+			<div id="mapsView">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54867.77351704707!2d1.6330037498358787!3d52.5725784408672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47da03bdfb898695%3A0x8ffa59e424615dce!2sKingfisher+Holiday+Park!5e0!3m2!1sen!2suk!4v1479240815610" width="980" height="600" frameborder="0" style="border:1"  allowfullscreen></iframe>
+			</div>
+		
+	
+				
+				
+			
+				</div>
+				
+				
+			
+				
+				
+				
+				
+				
+				
+				</div>
+				
+			
+		
+</div>
+
+	<div id = "footer">
+	<ul>
+					<ul>copyright nahim</ul>
+					<ul>About</ul>
+					<ul>Home</ul>
+	</ul>				
+		
+	</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
